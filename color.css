@@ -1,47 +1,47 @@
 .one {
-    background: rgba(255,0,0)
+  background: rgba(255, 0, 0);
 }
 
 .two {
-    background: rgba(0,0,255)
+  background: rgba(0, 0, 255);
 }
 
 .three {
-    background: rgba(0,255,0)
+  background: rgba(0, 255, 0);
 }
 
 .four {
-    background: rgb(0, 255, 255)
+  background: rgb(0, 255, 255);
 }
 
 .five {
-    background: rgb(5, 58, 16)
+  background: rgb(5, 58, 16);
 }
 
 .six {
-    background: rgb(100, 15, 100)
+  background: rgb(100, 15, 100);
 }
 
 .seven {
-    background: rgb(194, 117, 17)
+  background: rgb(194, 117, 17);
 }
 
 .eight {
-    background: rgb(255, 255, 0)
+  background: rgb(255, 255, 0);
 }
 
 .nine {
-    background: rgb(255, 0, 255)
+  background: rgb(255, 0, 255);
 }
 
 .ten {
-    background: rgba(0,0,0)
+  background: rgba(0, 0, 0);
 }
 
 .eleven {
-    background: rgb(179, 79, 79)
+  background: rgb(179, 79, 79);
 }
 
 .twelve {
-    background: rgb(60, 34, 133)
+  background: rgb(60, 34, 133);
 }

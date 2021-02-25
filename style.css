@@ -1,163 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 100% 1fr;
-    height: auto;
+  font-family: sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 100% 1fr;
+  height: auto;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'DotGothic16', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "DotGothic16", sans-serif;
 }
 h1 {
-    letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
-header, footer {
-    background: rgb(75, 77, 78);
-    color: rgb(244, 245, 253);
-    padding: 1em;
+header,
+footer {
+  background: rgb(75, 77, 78);
+  color: rgb(244, 245, 253);
+  padding: 1em;
 }
 
 footer > a {
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 footer > a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main {
-    padding: 0 1em;
-    display: grid;
-    height: auto;
-
+  padding: 0 1em;
+  display: grid;
+  height: auto;
 }
 
 main > div {
-    display: block;
-    height: auto;
+  display: block;
+  height: auto;
 }
 
 main > div > div {
-    height: auto;
+  height: auto;
 }
 
 .grid {
-    display: grid;
-    gap: .25em;
-    height: auto;
+  display: grid;
+  gap: 0.25em;
+  height: auto;
 }
 
 .grid > * {
-    border: solid 1px black
+  border: solid 1px black;
 }
 
 .grid-1 {
-    grid-template-columns: 2fr 6fr 1fr;
-    grid-template-rows: 25% 100px 1fr;
+  grid-template-columns: 2fr 6fr 1fr;
+  grid-template-rows: 25% 100px 1fr;
 }
 
 .grid-2 {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(50px, auto);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(50px, auto);
 }
 
 @media screen and (max-width: 768px) {
-    .grid-2 {
-        grid-template-columns: 1fr 1fr;
-    }
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .grid-2 {
-        grid-template-columns: 1fr;
-    }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-3 {
-    grid-template-columns: repeat(auto-fill, minmax(calc(768px / 3), 1fr));
-    grid-auto-rows: minmax(50px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(calc(768px / 3), 1fr));
+  grid-auto-rows: minmax(50px, auto);
 }
 
 .grid-3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .grid-4 .one {
-    grid-area: header;
-  }
-  .grid-4 .two {
-    grid-area: main;
-  }
-  .grid-4 .three {
-    grid-area: sidebar;
-  }
-  .grid-4 .four {
-    grid-area: footer;
-  }
-  .grid-4 .five {
-    grid-area: extra;
-  }
+  grid-area: header;
+}
+.grid-4 .two {
+  grid-area: main;
+}
+.grid-4 .three {
+  grid-area: sidebar;
+}
+.grid-4 .four {
+  grid-area: footer;
+}
+.grid-4 .five {
+  grid-area: extra;
+}
 
-  .grid-4 .six {
-    grid-area: big;
-  }
+.grid-4 .six {
+  grid-area: big;
+}
 
 .grid-4 {
-    height: max-content;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr 100px 1fr;
-    grid-template-areas: 
-      "header header header header header big"
-      "main main . sidebar extra big"
-      "footer footer footer footer footer big";
-  }
+  height: max-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
+  grid-template-areas:
+    "header header header header header big"
+    "main main . sidebar extra big"
+    "footer footer footer footer footer big";
+}
 
 @media screen and (max-width: 768px) {
-    .grid-4 {
-        grid-template-rows:  repeat(3, minmax(100px, calc(100% / 3)));
-        grid-template-areas: 
-        "header header header header header header"
-        "footer footer extra extra sidebar sidebar"
-        "main main main main main main";
-    }
-    .grid-4 .six {
-        display: none;
-    }
+  .grid-4 {
+    grid-template-rows: repeat(3, minmax(100px, calc(100% / 3)));
+    grid-template-areas:
+      "header header header header header header"
+      "footer footer extra extra sidebar sidebar"
+      "main main main main main main";
+  }
+  .grid-4 .six {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .grid-4 {
-        grid-template-rows: 25px repeat(3, 50px) 25px;
-        grid-template-areas: 
-        "big footer footer footer footer footer"
-        "big sidebar extra extra extra extra"
-        "big sidebar main main main main"
-        "big sidebar main main main main"
-        "big header header header header header";
-    }
-    .grid-4 .six {
-        display: block;
-    }
+  .grid-4 {
+    grid-template-rows: 25px repeat(3, 50px) 25px;
+    grid-template-areas:
+      "big footer footer footer footer footer"
+      "big sidebar extra extra extra extra"
+      "big sidebar main main main main"
+      "big sidebar main main main main"
+      "big header header header header header";
+  }
+  .grid-4 .six {
+    display: block;
+  }
 }
 
 .grid-5 {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  25% 150px 25%;
-    grid-template-areas: 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 150px 25%;
+  grid-template-areas:
     "header header header header header big"
     "main main . sidebar extra big"
-    "footer footer footer footer footer big";    
+    "footer footer footer footer footer big";
 }
